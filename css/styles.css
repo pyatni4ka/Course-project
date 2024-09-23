@@ -1,23 +1,79 @@
+/* Общий стиль для всех виджетов */
 QWidget {
-    background-color: #f0f0f0;
-}
-
-QLabel {
-    color: #333;
-}
-
-QPushButton {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    background-color: #f0f0f0; /* светло-серый фон */
+    border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
 }
 
-QPushButton:hover {
-    background-color: #45a049;
-}
-
-QRadioButton {
+/* Стиль для меток */
+QLabel {
+    font-size: 14px;
     color: #333;
+}
+
+/* Стиль для полей ввода */
+QLineEdit {
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Стиль для кнопок */
+QPushButton {
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Стиль для кнопок при наведении */
+QPushButton:hover {
+    background-color: #3e8e41;
+}
+
+/* Темная тема */
+QWidget[darkTheme="true"] {
+    background-color: #333;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+
+/* Темная тема для меток */
+QWidget[darkTheme="true"] QLabel {
+    color: #ccc;
+}
+
+/* Темная тема для полей ввода */
+QWidget[darkTheme="true"] QLineEdit {
+    background-color: #444;
+    color: #ccc;
+}
+
+/* Темная тема для кнопок */
+QWidget[darkTheme="true"] QPushButton {
+    background-color: #666;
+    color: #ccc;
+}
+
+/* Темная тема для кнопок при наведении */
+QWidget[darkTheme="true"] QPushButton:hover {
+    background-color: #777;
+}
+
+/* Меньшая кнопка переключения темы в углу */
+QPushButton#theme_button {
+    font-size: 10px;
+    padding: 2px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: #666;
+    color: #ccc;
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
